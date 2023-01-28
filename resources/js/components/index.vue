@@ -10,14 +10,7 @@
 <script>
     export default {
         name: 'index',
-        props: {
-            id: {
-                type: Number,
-            },
-            userName: {
-                type: String,
-            },            
-        },
+        props: ['id','userName'],
         data() {
             return {
                 name: ''
