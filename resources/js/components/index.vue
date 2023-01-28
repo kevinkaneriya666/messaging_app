@@ -20,8 +20,7 @@
         },
         data() {
             return {
-                name: '',
-                user_name: ''
+                name: ''
             }
         },
         methods: {
