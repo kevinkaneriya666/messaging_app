@@ -18,7 +18,7 @@
             }                    
         },
         mounted() {
-            //$('main').append('<button>Button</button>');
+            
         }
     }
 </script>
