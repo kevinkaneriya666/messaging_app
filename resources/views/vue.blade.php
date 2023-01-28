@@ -29,7 +29,7 @@
             <!-- Page Content -->
             <div>
                 <div id="app">
-                    <index></index>
+                    <index :id="100" user-name="kkcoder"></index>
                 </div>                
             </div>
         </div>       
