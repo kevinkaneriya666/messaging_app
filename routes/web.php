@@ -25,4 +25,6 @@ Route::middleware('auth')->group(function () {
     Route::resource('messages', 'MessageController');
 });
 
+Route::get('/test-vue','Controller@index');
+
 require __DIR__.'/auth.php';
