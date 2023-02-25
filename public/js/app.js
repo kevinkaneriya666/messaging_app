@@ -22589,8 +22589,8 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     getValue: function getValue(event) {
       //this.name = event.target.value;
-      this.password = event.target.value;
-      //this.$refs.input.focus()
+      //this.password = event.target.value;
+      this.$refs.input.value = event.target.value;
     },
     add: function add(event) {
       document.getElementById('id').value = this.id;
@@ -22598,7 +22598,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    this.$refs.input_1.focus();
+    //this.$refs.input.focus()
   }
 });
 
@@ -22643,7 +22643,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("ul", null, [data.price > 200 ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("li", _hoisted_6, " Book Title: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.title) + " / Price: " + (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(data.price), 1 /* TEXT */)) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)]);
   }), 256 /* UNKEYED_FRAGMENT */)), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("h2", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(_ctx.textData), 1 /* TEXT */), (0,vue__WEBPACK_IMPORTED_MODULE_0__.withDirectives)((0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
     type: "text",
-    ref: "input_1",
+    ref: "input",
     "onUpdate:modelValue": _cache[2] || (_cache[2] = function ($event) {
       return _ctx.textData = $event;
     })

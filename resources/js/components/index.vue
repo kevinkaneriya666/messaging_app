@@ -17,7 +17,7 @@
     </ul>
 
     <h2>{{ textData }}</h2>
-    <input type="text" ref="input_1" v-model="textData" />    
+    <input type="text" ref="input" v-model="textData" />    
 </template>
 
 <script>
@@ -33,8 +33,8 @@
         methods: {
             getValue(event) {
                 //this.name = event.target.value;
-                this.password = event.target.value;
-                //this.$refs.input.focus()
+                //this.password = event.target.value;
+                this.$refs.input.value = event.target.value;
             },
             add(event) {
                 document.getElementById('id').value = this.id;
@@ -42,7 +42,7 @@
             }
         },
         mounted() {
-            this.$refs.input_1.focus()
+            //this.$refs.input.focus()
         }
     }
 </script>
