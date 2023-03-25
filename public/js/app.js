@@ -22629,7 +22629,8 @@ __webpack_require__.r(__webpack_exports__);
   props: [],
   data: function data() {
     return {
-      hideShow: true
+      hideShow: true,
+      checked: true
     };
   },
   methods: {
@@ -22639,9 +22640,22 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         this.hideShow = false;
       }
+    },
+    functionTOcheck: function functionTOcheck() {
+      console.log('kkcoder');
     }
   },
-  mounted: function mounted() {}
+  mounted: function mounted() {
+    var _this = this;
+    window.setInterval(function () {
+      if (_this.checked == false) {
+        _this.checked = true;
+      } else {
+        _this.checked = false;
+      }
+      _this.functionTOcheck();
+    }, 2000);
+  }
 });
 
 /***/ }),
@@ -22723,12 +22737,18 @@ __webpack_require__.r(__webpack_exports__);
 var _hoisted_1 = {
   key: 0
 };
+var _hoisted_2 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("br", null, null, -1 /* HOISTED */);
+var _hoisted_3 = ["checked"];
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [$data.hideShow ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, "This is second Vue component")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
     onClick: _cache[0] || (_cache[0] = function () {
       return $options.takeAction && $options.takeAction.apply($options, arguments);
     })
-  }, "Hide/Show")], 64 /* STABLE_FRAGMENT */);
+  }, "Hide/Show"), _hoisted_2, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("input", {
+    type: "checkbox",
+    value: "1",
+    checked: $data.checked
+  }, null, 8 /* PROPS */, _hoisted_3)], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),

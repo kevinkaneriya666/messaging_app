@@ -1,6 +1,8 @@
 <template>
     <div v-if="hideShow">This is second Vue component</div>
     <button @click="takeAction">Hide/Show</button>
+    <br>
+    <input type="checkbox" value="1" :checked="checked" />
 </template>
 <script>
     export default {
@@ -8,7 +10,8 @@
         props: [],
         data() {
             return {
-                hideShow: true
+                hideShow: true,
+                checked: true                
             }
         },
         methods: {
@@ -18,11 +21,20 @@
                 } else{
                     this.hideShow = false;
                 }                
+            },
+            functionTOcheck(){
+                console.log('kkcoder');
             }
         },
         mounted() {
-           
-
+            window.setInterval(()=>{
+                if(this.checked == false){
+                    this.checked = true;
+                } else{
+                    this.checked = false;
+                }
+                this.functionTOcheck();
+           },2000);
         }
     }
 </script>
