@@ -22628,9 +22628,19 @@ __webpack_require__.r(__webpack_exports__);
   name: 'second',
   props: [],
   data: function data() {
-    return {};
+    return {
+      hideShow: true
+    };
   },
-  methods: {},
+  methods: {
+    takeAction: function takeAction(event) {
+      if (this.hideShow == false) {
+        this.hideShow = true;
+      } else {
+        this.hideShow = false;
+      }
+    }
+  },
   mounted: function mounted() {}
 });
 
@@ -22710,8 +22720,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  key: 0
+};
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, "This is second Vue component");
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [$data.hideShow ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", _hoisted_1, "This is second Vue component")) : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementVNode)("button", {
+    onClick: _cache[0] || (_cache[0] = function () {
+      return $options.takeAction && $options.takeAction.apply($options, arguments);
+    })
+  }, "Hide/Show")], 64 /* STABLE_FRAGMENT */);
 }
 
 /***/ }),
