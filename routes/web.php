@@ -26,5 +26,6 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/test-vue','Controller@index');
+Route::get('/test-vue-2','Controller@second');
 
 require __DIR__.'/auth.php';

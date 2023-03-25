@@ -14,4 +14,8 @@ class Controller extends BaseController
     public function index(){
         return view('vue');
     }
+
+    public function second(){
+        return view('second');
+    }
 }
