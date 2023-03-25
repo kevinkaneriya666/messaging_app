@@ -30,20 +30,7 @@
             <div>
                 <div id="app">
                     @php
-                        $data = [
-                            [
-                                'title' => 'Mehula',
-                                'price' => 300
-                            ],
-                            [
-                                'title' => 'Kauff',
-                                'price' => 230
-                            ],
-                            [
-                                'title' => 'Devil Returns',
-                                'price' => 500
-                            ]
-                        ]
+                        $data = [['title' => 'Mehula','price' => 300],['title' => 'Kauff','price' => 230],['title' => 'Devil Returns','price' => 500]];
                     @endphp
                     <index :id="100" :data="{{json_encode($data)}}" user-name="kkcoder"></index>
                 </div>                

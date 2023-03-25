@@ -22602,18 +22602,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   mounted: function mounted() {
-    // this.objectData =  [{
-    //                     'title' : 'Mehula',
-    //                     'price' : 300
-    //                 },
-    //                 {
-    //                     'title' : 'Kauff',
-    //                     'price' : 230
-    //                 },
-    //                 {
-    //                     'title' : 'Devil Returns',
-    //                     'price' : 500
-    //                 }]
+    //this.objectData =  [{'title' : 'Mehula','price' : 300},{'title' : 'Kauff','price' : 230},{'title' : 'Devil Returns','price' : 500}]
     this.$refs.input.focus();
   }
 });
