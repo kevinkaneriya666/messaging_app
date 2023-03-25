@@ -22,7 +22,7 @@
                     this.hideShow = false;
                 }                
             },
-            functionTOcheck(){
+            functionTocheck(){
                 console.log('kkcoder');
             }
         },
@@ -33,7 +33,7 @@
                 } else{
                     this.checked = false;
                 }
-                this.functionTOcheck();
+                this.functionTocheck();
            },2000);
         }
     }

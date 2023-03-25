@@ -22641,7 +22641,7 @@ __webpack_require__.r(__webpack_exports__);
         this.hideShow = false;
       }
     },
-    functionTOcheck: function functionTOcheck() {
+    functionTocheck: function functionTocheck() {
       console.log('kkcoder');
     }
   },
@@ -22653,7 +22653,7 @@ __webpack_require__.r(__webpack_exports__);
       } else {
         _this.checked = false;
       }
-      _this.functionTOcheck();
+      _this.functionTocheck();
     }, 2000);
   }
 });
