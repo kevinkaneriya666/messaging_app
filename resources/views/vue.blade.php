@@ -30,9 +30,9 @@
             <div>
                 <div id="app">
                     @php
-                        $data = [['title' => 'Mehula','price' => 300],['title' => 'Kauff','price' => 230],['title' => 'Devil Returns','price' => 500]];
+                        $colors = [['title'=>'Red','color' => '#FF0000'],['title'=>'Green','color' => '#00FF00'],['title'=>'Blue','color' => '#0000FF']];
                     @endphp
-                    <index :id="100" :data="{{json_encode($data)}}" user-name="kkcoder"></index>
+                    <index :id="100" :colors="{{json_encode($colors)}}" user-name="kkcoder"></index>
                 </div>                
             </div>
         </div>       
