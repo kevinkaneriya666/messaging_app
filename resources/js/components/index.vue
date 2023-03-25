@@ -10,24 +10,29 @@
     <br>
     <br>
     <br>
-    <ul v-for="data in objectData">
+    <!-- <ul v-for="data in objectData">
         <li v-if="data.price > 200"> 
             Book Title: {{ data.title }} / Price: {{ data.price }}
         </li>
-    </ul>
+    </ul> -->
 
     <h2>{{ textData }}</h2>
     <input type="text" ref="input" v-model="textData" />    
+
+    <select v-on:change="checkSelected">
+        <option v-for="datas in data">{{ datas.title }}</option>
+    </select>
 </template>
 
 <script>
     export default {
         name: 'index',
-        props: ['id','userName','objectData'],
+        props: ['id','userName','data'],
         data() {
             return {
                 name: '',
-                password: '123456'
+                password: '123456',
+                objectData: {}
             }
         },
         methods: {
@@ -39,10 +44,26 @@
             add(event) {
                 document.getElementById('id').value = this.id;
                 document.getElementById('name').value = this.userName;                
+            },
+            checkSelected(event){
+                alert(event.target.value);
             }
         },
         mounted() {
-            //this.$refs.input.focus()
+            // this.objectData =  [{
+            //                     'title' : 'Mehula',
+            //                     'price' : 300
+            //                 },
+            //                 {
+            //                     'title' : 'Kauff',
+            //                     'price' : 230
+            //                 },
+            //                 {
+            //                     'title' : 'Devil Returns',
+            //                     'price' : 500
+            //                 }]
+            this.$refs.input.focus()
+
         }
     }
 </script>

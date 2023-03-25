@@ -45,7 +45,7 @@
                             ]
                         ]
                     @endphp
-                    <index :id="100" :object-data="{{ json_encode($data) }}" user-name="kkcoder"></index>
+                    <index :id="100" :data="{{json_encode($data)}}" user-name="kkcoder"></index>
                 </div>                
             </div>
         </div>       
