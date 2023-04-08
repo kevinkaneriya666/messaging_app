@@ -27,5 +27,8 @@ Route::middleware('auth')->group(function () {
 
 Route::get('/test-vue','Controller@index');
 Route::get('/test-vue-2','Controller@second');
+Route::get('/test-vue-3','Controller@third');
+
+Route::post('/fetch-users','Controller@postFetchUsers')->name('fetch_users');
 
 require __DIR__.'/auth.php';
