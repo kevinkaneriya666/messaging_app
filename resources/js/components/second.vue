@@ -32,8 +32,7 @@
                     this.checked = true;
                 } else{
                     this.checked = false;
-                }
-                this.functionTocheck();
+                }                
            },2000);
         }
     }
