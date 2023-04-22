@@ -5,10 +5,7 @@
             <th>Email</th>            
         </thead>
         <tbody>
-            <template v-if="loading == true">
-                <h1>Data is being loaded please wait!</h1>
-            </template>
-            <template v-else>
+            <template>
                 <tr v-for="user in users">
                     <td>{{ user.name }}</td>
                     <td>{{ user.email }}</td>
@@ -26,23 +23,18 @@
         props: [],
         data() {
             return {
-                users: '',
-                loading: false
+                users: ''
             }
         },
         methods: {
             
         },
-        mounted() {
-            this.loading = true;
-            setTimeout(function(){
-                axios.post('/fetch-users').then(
-                    response => {                    
-                        this.loading = false;
-                        this.users = response.data;
-                    }
-                );
-            },2000);                
+        mounted() {            
+            axios.post('/fetch-users').then(
+                response => {                                            
+                    this.users = response.data;
+                }
+            );             
         }
     }
 </script>
