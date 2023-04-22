@@ -35,6 +35,11 @@
             thead{
                 background-color: #036bfc;
             }
+            form{
+                width: 60%;                  
+                margin: 0px auto;
+                margin-top: 20px;
+            }
         </style>
                 
     </head>

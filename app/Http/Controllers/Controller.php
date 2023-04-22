@@ -8,6 +8,7 @@ use Illuminate\Foundation\Bus\DispatchesJobs;
 use Illuminate\Foundation\Validation\ValidatesRequests;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Support\Facades\Hash;
 
 class Controller extends BaseController
 {
@@ -30,6 +31,24 @@ class Controller extends BaseController
             $user = User::limit(5)->get()->toArray();
 
             return response()->json($user);
+        }
+    }
+
+    public function postStoreUsers(Request $request){
+        if($request->ajax()){            
+            $user = new User();
+            $user->name = $request->get('name');
+            $user->email = $request->get('email');
+            $user->password = Hash::make($request->get('password'));
+            $user->save();
+
+            return response()->json([
+                'status' => 1,
+                'response' => [
+                    'name' => $user->name,
+                    'email' => $user->email
+                ]
+            ]);
         }
     }
 }
