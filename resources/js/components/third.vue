@@ -5,12 +5,10 @@
             <th>Email</th>            
         </thead>
         <tbody>
-            <template>
-                <tr v-for="user in users">
-                    <td>{{ user.name }}</td>
-                    <td>{{ user.email }}</td>
-                </tr>
-            </template>
+            <tr v-for="user in users">
+                <td>{{ user.name }}</td>
+                <td>{{ user.email }}</td>
+            </tr>
         </tbody>
     </table>
 </template>
@@ -23,18 +21,18 @@
         props: [],
         data() {
             return {
-                users: ''
+                users: ''                
             }
         },
         methods: {
             
         },
-        mounted() {            
+        mounted() {
             axios.post('/fetch-users').then(
-                response => {                                            
+                response => {                                        
                     this.users = response.data;
                 }
-            );             
+            );                
         }
     }
 </script>
