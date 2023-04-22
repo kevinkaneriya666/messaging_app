@@ -28,7 +28,7 @@ class Controller extends BaseController
 
     public function postFetchUsers(Request $request){
         if($request->ajax()){            
-            $user = User::limit(5)->get()->toArray();
+            $user = User::limit(5)->orderBy('id','desc')->get()->toArray();
 
             return response()->json($user);
         }
